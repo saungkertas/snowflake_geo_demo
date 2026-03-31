@@ -1,0 +1,8 @@
+-- ST_DIFFERENCE: Subtract one geometry from another
+USE DATABASE GEO_DEMO_DB;
+USE SCHEMA DEMO_SCHEMA;
+
+SELECT ST_DIFFERENCE(
+    TO_GEOMETRY('POLYGON((0 0, 10 0, 10 10, 0 10, 0 0))'),
+    TO_GEOMETRY('POLYGON((5 5, 15 5, 15 15, 5 15, 5 5))')
+) AS difference_result;
